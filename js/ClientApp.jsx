@@ -1,15 +1,14 @@
-// @flow
-
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
+import App from './App';
 
-/* APP */
-const App = function() {
-  return (
-    <div>
-      <p>Hello World</p>
-    </div>
-  );  
+const renderApp = () => {
+  render(<App />, document.getElementById('app'));
+};
+renderApp();
+
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    renderApp();
+  });
 }
-
-render(<App />, document.getElementById('app'));
