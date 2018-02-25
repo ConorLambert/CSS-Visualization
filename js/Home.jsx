@@ -1,5 +1,17 @@
 import React from 'react';
+import Header from './Header';
+import Main from './Main';
 
-const Home = () => <h1>Not done yet</h1>
+const homeStyle = {
+    display:'flex',
+    flexDirection:'column',
+    height:'100vh'
+}
+
+const Home = () =>
+    <div style={homeStyle}>
+        <Header />
+        <Main />
+    </div>
 
 export default Home;
