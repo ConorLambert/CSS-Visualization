@@ -2,9 +2,64 @@
 body{
     font-size: 16px;
     line-height: 1.5;
-    font-family: Open Sans,sans-serif;
+    font-family: Circular Bold, Helvetica, sans-serif;
+    font-weight: 400;
     margin:0;
 }
-.site-margin{
-    margin-left:5%;
+
+/* HEADER */
+header, nav > .menuIcon {
+    height:110px;
 }
+nav > .menuIcon > img {
+    width:50px;
+}
+
+/* MAIN */
+main {
+  height:100vh;
+}
+
+/* NAVIGATION */
+/* indent effect for nested uls */
+nav a {
+    color: #999999;
+    font-size:20px;
+    font-weight:600;
+    position: relative;
+    text-decoration:none;
+}
+.selectedLink { 
+    color:#ffffff;
+    text-decoration:none;
+}
+nav > .menuIcon {
+    background: #707070;
+    width:70px;
+}
+nav > .menu {
+    background: #404040;
+    height:100%;
+}
+nav > .menu, nav > .menuIcon {
+    width:250px;
+}
+nav .tutorial, nav img {
+    padding: 30px;
+    position: relative;
+}
+nav > div > .tutorial:after {
+    border-bottom: 1px solid #707070;
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.menu .menu {
+    display:none;
+}
+.menu .menu a {
+    font-size:1.0em;
+}
+

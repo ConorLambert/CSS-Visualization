@@ -1,25 +1,29 @@
-import React from 'react'
+import React from 'react';
 
 const headerStyle = {
     position:'relative',
-    height:'80px',
     display:'flex',
     alignItems:'center',
-    width:'95%'
 }
-const navButtonStyle = {
+const logoWrapperStyle = {
     display:'inline-block',
-    position:'absolute',
+    flexGrow:'1',
+    textAlign: 'center'
 }
 const logoStyle = {
-    display:'inline-block',
-    marginLeft:'50%'
+    fontSize: '40px',
+    letterSpacing: '2px',
+    transition: 'color 0.125s ease-in-out',
+    color: '#58ade3',
+    textDecoration: 'none',
+    fontWeight:'600'
 }
 
 const Header = () => 
     <header style={headerStyle}>
-        <div className="site-margin" style={navButtonStyle}>Nav Button</div>
-        <div style={logoStyle}>CSS Logo Website</div>
+        <div style={logoWrapperStyle}>
+            <a style={logoStyle}>CSS Interactive Tutorials</a>
+        </div>
     </header>
 
 export default Header;

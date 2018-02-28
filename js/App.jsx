@@ -1,19 +1,21 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './Home';
+import { BrowserRouter } from 'react-router-dom';
+import Header from './Header';
+import Navigation from './Navigation';
+import Main from './Main'
 
-const FourOhFour = () => <h1>404</h1>;
+const homeStyle = {
+  display:'flex',
+  flexDirection:'column'
+}
 
-const App = () => (
+const App = () =>
   <BrowserRouter>
-    <div className="app">
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/index" component={Home} />
-        <Route component={FourOhFour} />
-      </Switch>
+    <div style={homeStyle}>
+      <Header />
+      <Navigation />
+      <Main />
     </div>
   </BrowserRouter>
-);
 
 export default App;
